@@ -8,9 +8,16 @@ Build an end-to-end system that predicts which in-transit shipments will arrive 
 
 # Dataset
 - Dataset: (maplefreight_delivery_delay_dataset.csv)
-- Source: [Add the original dataset source or link]
-- Target variable: [Add the exact target column]
-- Data preparation: []
+- Target variable: 
+'origin_city', 'destination_city', 'carrier', 'service_level',
+    'goods_type', 'customer_priority_tier', 'shipment_month',
+    'distance_km', 'weight_kg', 'num_stops', 'is_cross_border',
+    'scheduled_transit_hours', 'pickup_delay_minutes',
+    'driver_experience_years', 'vehicle_age_years',
+    'weather_condition', 'traffic_index', 'route_congestion_score',
+    'prior_late_deliveries_30d', 'fuel_cost_cad',
+    'holiday_season', 'driver_experience_level', 'high_congestion'
+- Data preparation: Handled Missing values using mean, mode and median imputation and dropped duplicate row. 
 - Leakage prevention: actual_transit_hours is excluded from
   the prediction features because it may reveal information
   that would affect model predictions.
